@@ -45,7 +45,9 @@ const invokerLeftClickHandler = (e) => {
 // Add event listener to hide the context menu when clicked outside
 document.addEventListener('click', function(event) {
     if (event.target !== contextMenu && event.target.parentNode !== contextMenu) {  // && event.target !== element
-        contextMenu.style.display = 'none'; 
+        if (typeof contextMenu !== 'undefined') {
+            contextMenu.style.display = 'none'; 
+          }
     }
 });
 
@@ -86,7 +88,7 @@ function createContextMenu() {
         document.body.appendChild(contextMenu);
 }
 
-function removeButtonLogic() {
+function buttonLogicForRemoveButton() {
     // remove event handlers for the context menu options
     var options = document.querySelectorAll(".option");
     var invokerbuttons = document.querySelectorAll(".invokerbutton");
