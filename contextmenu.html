@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="contextmenu.js"> </script>
+</head>
+<style>
+.context-menu {
+  position: absolute;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  padding: 10px;
+  font-size: 16px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  box-shadow: 6px 6px 10px rgba(87, 43, 1, 0.2);
+}
+
+.context-menu {display:none;}
+
+.context-menu div {
+  padding: 10px; cursor: pointer;
+}
+
+.context-menu div:hover {
+  background-color: #f2f2f2;
+}
+</style>
+
+<body>
+  <button id="createInvoker" onclick="createInvoker()">Create button with context menu</button>
+  <button id="removeButton" onclick="removeButtonLogic()">Remove change button</button>
+
+</body>
+</html>
